@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>portfolio</title><header></header>
+
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+body{
+
+  
+  background-color:rgb(0, 0, 0);
+
+
+}
+a{
+  text-decoration: none;
+
+}
+/***navbar***/
+.menu-container{
+
+  position: relative;
+  padding-top: 5px;
+  display:flex;
+  justify-content: center;
+  Z-index:99;
+  
+
+}
+.menu{
+  position: fixed;
+  width: 100%;
+  max-width: calc(100% - 20px);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(197, 197, 197, 0.185);
+border-radius: 11px;
+padding: 20px;
+backdrop-filter: blur(10px);
+
+} 
+.menu-button,.menu-button-label{
+
+  display:none;
+  opacity: 0;
+  visibility: hidden;
+
+}
+.menu-list_link{
+  color:#ffffff;
+  font-size: 16px;
+  transition: color 0.4s;
+   
+}
+.menu-list_link:hover {
+  color: rgb(255, 0, 0);
+  
+}
+.logo{
+  margin-right: 90px;
+  font-weight: bold;
+  color: red;
+  font-size: 19px;
+  
+}
+.menu-list{
+  display: flex;
+  gap:40px;
+  font-weight: bold;
+}
+@media(max-width:595px)
+{
+
+.menu-list-body{
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+
+}
+.menu-list{
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 0;
+
+}
+.menu-button-label_img{
+  display: block;
+  width: 100%;
+
+}
+.menu-button-label{
+  display: flex;
+  align-items: center;
+  width: 40px;
+  opacity: 1;
+  visibility: visible;
+  cursor:pointer;
+
+}
+#menu-button:checked ~ .menu-list-body
+{
+  max-height: 100%;
+}
+
+}
+
+
+
+
+
+/***home page***/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  text-decoration: none;
+  border:none;
+  outline:none;
+  font-family: sans-serif;
+
+}
+
+html{
+
+  font-size: 62.5%;
+
+}
+
+body{
+
+  width: 100%;
+  height: 200vh;
+  overflow-x:hidden;
+  background-color: black;
+  color: white;
+
+}
+
+section.home{
+min-height: 100vh;
+padding: 5rem 5% 5rem;
+
+
+}
+
+.home{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 6rem;
+background-color: black;
+margin-top: 5rem;
+
+
+}
+
+.home .home-content h1{
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+}
+span{
+  color: red;
+
+}
+.home-content h3{
+
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+
+}
+
+.home-img{
+
+  margin-bottom: 5rem;
+
+}
+.home-img img{
+
+  position: relative;
+  width: 50vh;
+border-radius: 0;
+box-shadow: 0 0 25px solid #bd0808;
+cursor: pointer;
+transition: 0.2s linear;
+
+
+
+}
+
+.home-img img:hover{
+font-size: 1.8rem;
+font-weight: 500;
+
+}
+
+.social-icons a{
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 4rem;
+height: 4rem;
+background-color:transparent;
+border:0.2rem solid #bd0808;
+font-size: 2rem;
+border-radius: 50%;
+margin: 3rem 1.5rem 3rem 0;
+transition: 0.3s ease;
+color: #ffffff;
+
+
+}
+
+.social-icons a:hover{
+
+  color: rgb(255, 255, 255);
+  transform:scale(1.3) translateY(-5px);
+background-color: #bd0808;
+box-shadow: 0 0 25px red;
+
+
+}
+.btn{
+display:inline-block ;
+padding: 0.9rem 2rem;
+background-color: black;
+border-radius: 4rem;
+font-size: 1.6rem;
+color: hsl(0, 0%, 100%);
+letter-spacing: 0.1rem;
+font-weight: 600;
+border: 2px solid #bd0808;
+transition: 0.3s ease;
+cursor: pointer;
+
+}
+.btn:hover{
+  transform: scale3d(1.03);
+  background-color: #bd0808;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 25px red;
+
+}
+.home-content p{
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@keyframes animate{
+
+0%{
+scale: 1;
+}
+
+50%{
+scale: 1.05;
+}
+
+
+
+100%{
+scale: 1;
+}
+}
+
+
+/*  responsive home section  */
+
+@media (max-width:1000px){
+  .home{
+    gap: 4rem;
+    
+   
+  }
+}
+@media(max-width:595px){
+  .home{
+    flex-direction: column;
+    margin:5rem 4rem;
+    
+
+  }
+  .home .home-content h3{
+    font-size:2.5rem;
+
+
+  }
+
+  .home-content h1{
+    font-size: 5rem;
+    
+
+}
+.home-img img{
+width: 70vw;
+margin-top: 4rem;
+
+}
+
+}
+@media(max-width:991px){
+  .home{
+    flex-direction: column;
+    margin:5rem 4rem;
+    
+    
+
+  }
+}
+
+
+/*  responsive webkit section  */
+
+
+::-webkit-scrollbar{
+  width: 5px;
+
+}
+::-webkit-scrollbar-thumb{
+background-color: #bd0808;
+
+}
+
+::-webkit-scrollbar-track{
+background-color: #000000;
+
+}
+
+
+/*   skills section   */
+
+
+h1.skills_section{
+
+  margin-top: -10px;
+color: white;
+font-size:   50px;
+padding-top: 100px;
+text-align: center;
+font-family: sans-serif;
+
+}
+
+h1.skills_section span{
+  color: #bd0808;
+  font-family: sans-serif;
+
+}
+div.card{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: justify;
+  margin: 70px;
+  color: white;
+  text-align: center;
+  
+
+}
+.skills_card{
+background-color: rgb(0, 0, 0);
+padding: 30px;
+border-radius: 10px;
+border: 2px  solid red;
+transition: .5s ease;
+
+
+}
+.skills_card:hover{
+  border: 2px solid rgb(255, 255, 255);
+  background-color: #830000;
+  transform: translateY(-20px);
+  box-shadow: 0 0 25px red;
+}
+
+.skills_card i{
+  font-size:  50px;
+  color: #ffffff;
+  padding-bottom: 20px;
+  
+  
+}
+.skills_card p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  
+
+}
+.skills_card a{
+  font-size: large;
+  color: #dbdbdb;
+}
+
+
+/*  responsive skills section  */
+
+@media screen and (max-width:600px){
+  h1.skills_section{
+
+    font-size: 35px;
+    margin-bottom: -40px;
+    
+  }
+
+  .card{
+    grid-template-columns: 1fr;
+    flex-wrap: wrap;
+  }
+  .skills_card{
+    margin-top: 20px;
+  }
+  .skills_card h2{
+    font-size: 25px;
+  }
+}
+
+  </style>
+
+
+
+
+<body>
+  <div class="menu-container">
+<nav class="menu">
+  <a href="#" class="logo" data-aos="zoom-in" data-aos-duration="1500"> .Portfolio</a>
+  <input id="menu-button" type="checkbox" class="menu-button">
+  <label for="menu-button" class="menu-button-label">
+    <img src="images/burger-bar.png" alt="" class="menu-button-label_img">
+
+  </label>
+  <div class="menu-list-body">
+    <ul class="menu-list">
+      <a href="#"data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" class="menu-list_link">Home</a>
+      <a href="#skills"data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"class="menu-list_link">Skills</a>
+      <a href="#" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="300"class="menu-list_link">Projects</a>
+      <a href="#" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="400"class="menu-list_link">Contact</a>
+    </ul>
+
+</div>
+
+</nav>
+
+  </div>
+  
+
+  <section class="home">
+    <div class="home-img"data-aos="zoom-in" data-aos-duration="3000">
+      <img src="images/pic4.png" alt="profile pic">
+      </div>
+    <div class="home-content" data-aos="fade-left" data-aos-duration="1500"data-aos-delay="700">
+      <h1>Hi,Its<font color="red"> Abhishek</font></h1>
+        <h3>I'am a<font color="red"> Ui/Ux </font> Designer.</h3>
+<p>   
+  I’m Abhishek Kashyap, a passionate Graphic Designer, UX/UI Designer, and Web Developer with a strong foundation in art, painting, and color theory. With years of experience in illustrations, vector art, minimalist logos, and website design, I blend creativity with functionality to craft visually compelling and user-friendly designs. My expertise extends to designing intuitive user experiences that enhance digital interactions. Whether it’s branding, digital illustrations, or web development, I strive to create aesthetically pleasing and meaningful designs that leave a lasting impact. Let’s bring ideas to life through creativity and innovation!
+</p>
+
+<div class="social-icons" data-aos="flip-down" data-aos-duration="1500"data-aos-delay="600">
+  <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/invites/contact/?i=pwru9a7x3z8r&utm_content=hsn78s7"> <i class="fa-brands fa-instagram"></i></a>
+  <a href="https://www.behance.net/abhishekkashyap51"> <i class="fa-brands fa-behance"></i></a>
+  <a href="https://wa.me/9891378288"> <i class="fa-brands fa-whatsapp"></i></a>
+</div>
+<a href="./images/Abhishek Kashyap.pdf" download="" class="btn" data-aos="zoom-in" data-aos-duration="1500"data-aos-delay="500">Resume</a>
+
+    </div>
+
+  </section>
+
+
+<section id="skills">
+  <h1 class="skills_section"> My <span>Skills</span></h1>
+  <div class="card">
+    <div class="skills_card">
+      <i class="fas fa-computer"></i>
+      <h2>GRAPHIC DESIGN</h2>
+      <p> I design intuitive and engaging UI/UX solutions that enhance user interaction. 
+        From wireframes to final designs, I create visually appealing, user-friendly interfaces
+         that bring your vision to life. Let’s build something amazing together!
+</p>
+<a href="#">Read More....</a>
+    </div>
+
+
+    <div class="skills_card">
+      <i class="fa-brands fa-html5"></i>
+      
+      <h2>WEB DEVELOPER</h2>
+      <p> I design intuitive and engaging UI/UX solutions that enhance user interaction. 
+        From wireframes to final designs, I create visually appealing, user-friendly interfaces
+         that bring your vision to life. Let’s build something amazing together!
+</p>
+<a href="#">Read More....</a>
+    </div>
+
+
+    <div class="skills_card">
+      <i class="fa-brands fa-figma"></i>
+        <h2>UI/UX DESIGN</h2>
+      <p> I design intuitive and engaging UI/UX solutions that enhance user interaction. 
+        From wireframes to final designs, I create visually appealing, user-friendly interfaces
+         that bring your vision to life. Let’s build something amazing together!
+</p>
+<a href="#">Read More....</a>
+    </div>
+  </div>
+
+<section id="portfolio">
+  <h1 class="port_section"> my <span>Work</span> </h1> 
+
+  <div class="projects">
+    <div class="port_card">
+      <img src="images/p2.png" alt="realstate" width="400px" >
+
+      <div class="content">
+        <h1> REAL STATE WEB</h1>
+        <P> Discover modern and elegant real estate solutions with our beautifully designed website. 
+          Featuring seamless navigation, stunning 
+          property showcases, and user-friendly search
+           filters, our platform makes finding the
+            perfect home effortless. Whether you're 
+            buying, selling, or renting, experience 
+            real estate like never before!</P>
+
+      </div>
+    </div>
+
+    <div class="port_card">
+      <img src="images/p4.png" alt="isro" width="400px" >
+
+      <div class="content">
+        <h1> ISRO WEB</h1>
+        <P> Discover modern and elegant real estate solutions with our beautifully designed website. 
+          Featuring seamless navigation, stunning 
+          property showcases, and user-friendly search
+           filters, our platform makes finding the
+            perfect home effortless. Whether you're 
+            buying, selling, or renting, experience 
+            real estate like never before!</P>
+
+      </div>
+    </div>
+
+    
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({offset:0});
+  </script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
