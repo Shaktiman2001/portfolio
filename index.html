@@ -437,8 +437,144 @@ transition: .5s ease;
 }
 
 
-/*  projects section  */
+/*  card saction  */
 
+
+*{
+  margin: 0;
+
+padding:0
+;
+box-sizing: border-box;
+
+}
+body .wrapper{
+  background-color: rgba(255, 255, 255, 0.048);
+  padding-bottom: 130px;
+}
+
+
+.wrapper{
+  padding: 10px 10%;
+  
+
+}
+#card-area{
+  padding: 30px 0;
+  padding-top: 140px;
+  padding: 15px;
+  
+}
+.box-area{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-gap: 40px;
+  margin-top: 70px;
+  
+}
+
+.box{
+  border-radius: 10px;
+position:relative;
+overflow: hidden;
+border: 3px  solid rgb(155, 0, 0);
+transition: .5s ease;
+
+
+
+
+
+}
+
+.box:hover{
+
+ 
+  transform: translateY(-20px);
+}
+
+.box img{
+  width: 100%;
+ border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+  background-size:cover;
+  
+
+
+}
+.overlay{
+
+  height: 0px;
+  width: 100%;
+
+  background:linear-gradient(transparent,rgb(0, 0, 0) 58%);
+  border-radius:10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  text-align: center;
+  font-size: 18px;
+  transition: height 0.5s;
+ 
+  padding: -5px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
+}
+.overlay h3{
+  font-weight: 30px;
+  margin-bottom: 5px;
+  margin-top: 8%;
+  font-family: sans-serif;
+  font-size: 35px;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+
+}
+.overlay a{
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+  
+
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px 15px;
+  font-weight: 10;
+  font-size: 1.7rem;
+  border: 3px solid rgb(175, 0, 0);
+  color: white;
+  
+  
+}
+.wrapper h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: sans-serif;
+  padding-top: 50px;
+  
+
+}
+
+  
+
+.boxLhover img{
+
+  transform: scale(1.2);
+
+}
+.box:hover .overlay{
+  height: 200px;
+}
 
   </style>
 
@@ -446,6 +582,8 @@ transition: .5s ease;
 
 
 <body>
+
+
   <div class="menu-container">
 <nav class="menu">
   <a href="#" class="logo" data-aos="zoom-in" data-aos-duration="1500"> .Portfolio</a>
@@ -533,6 +671,64 @@ transition: .5s ease;
 
 </section>
 
+
+<div id="card-area">
+  
+  <div class="wrapper">
+    <h1> My <span>Projects</span></h1>
+    <div class="box-area" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="200">
+      
+      <div class="box">
+        <img src="images/p2.png" alt="">
+        <div class="overlay">
+          <h3> Real State</h3>
+          <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
+          <a href="#"> Review Site</a>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/p2.png" alt="">
+        <div class="overlay">
+          <h3> Isro</h3>
+          <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
+          <a href="#"> Review Site</a>
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/p1.png" alt="">
+        <div class="overlay">
+          <h3> Botanical garden</h3>
+          <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
+          <a href="#"> Review Site</a>
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/p3.png" alt="">
+        <div class="overlay">
+          <h3> Gaming site</h3>
+          <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
+          <a href="#"> Review Site</a>
+          
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="images/p4.png" alt="">
+        <div class="overlay">
+          <h3> Real State</h3>
+          <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
+          <a href="#"> Review Site</a>
+          
+        </div>
+      </div>
+    </div>
+</div>
 
 
 
