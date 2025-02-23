@@ -84,24 +84,31 @@ backdrop-filter: blur(10px);
   gap:40px;
   font-weight: bold;
 }
+
+
 @media(max-width:595px)
 {
+
 
 .menu-list-body{
   width: 100%;
   max-height: 0;
   overflow: hidden;
+  
+  
 
 }
 .menu-list{
   flex-direction: column;
   align-items: center;
   padding: 20px 20px 0;
+    flex-wrap: wrap;
 
 }
 .menu-button-label_img{
   display: block;
   width: 100%;
+    flex-wrap: wrap;
 
 }
 .menu-button-label{
@@ -111,6 +118,7 @@ backdrop-filter: blur(10px);
   opacity: 1;
   visibility: visible;
   cursor:pointer;
+  
 
 }
 #menu-button:checked ~ .menu-list-body
@@ -120,6 +128,8 @@ backdrop-filter: blur(10px);
 
 }
 
+
+ 
 
 
 
@@ -384,6 +394,7 @@ padding: 30px;
 border-radius: 10px;
 border: 2px  solid red;
 transition: .5s ease;
+cursor: pointer;
 
 
 }
@@ -692,6 +703,9 @@ body .wrapper {
 
 /* Responsive Design */
 @media screen and (max-width: 390px) {
+
+
+  
   .wrapper {
     padding: 10px 3%;
   }
@@ -719,11 +733,65 @@ body .wrapper {
     height: 140px;
   }
 }
-
-
-
-
 }
+
+/* footer */
+
+        .footer {
+            background: #121212;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .social-icons a:hover {
+            color: #ffffff;
+        }
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: red;
+            
+        }
+        .copyright {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        @media (min-width: 600px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-around;
+                width: 80%;
+                margin: auto;
+            }
+          }
+
+
+
   </style>
 
 
@@ -742,10 +810,10 @@ body .wrapper {
   </label>
   <div class="menu-list-body">
     <ul class="menu-list">
-      <a href="#"data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" class="menu-list_link">Home</a>
+      <a href="#home"data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" class="menu-list_link">Home</a>
       <a href="#skills"data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"class="menu-list_link">Skills</a>
-      <a href="#" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="300"class="menu-list_link">Projects</a>
-      <a href="#" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="400"class="menu-list_link">Contact</a>
+      <a href="#card-area" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="300"class="menu-list_link">Projects</a>
+      <a href="#footer" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="400"class="menu-list_link">Contact</a>
     </ul>
 
 </div>
@@ -827,7 +895,7 @@ body .wrapper {
     <div class="box-area" data-aos="fade-up" data-aos-duration="1500"data-aos-delay="200">
       
       <div class="box">
-        <img src="images/p2.png" alt="">
+        <img src="images/p3.png" alt="">
         <div class="overlay">
           <h3> Real State</h3>
           <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
@@ -837,7 +905,7 @@ body .wrapper {
       </div>
 
       <div class="box">
-        <img src="images/p2.png" alt="">
+        <img src="images/p3.png" alt="">
         <div class="overlay">
           <h3> Isro</h3>
           <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
@@ -847,7 +915,7 @@ body .wrapper {
       </div>
 
       <div class="box">
-        <img src="images/p1.png" alt="">
+        <img src="images/p3.png" alt="">
         <div class="overlay">
           <h3> Botanical garden</h3>
           <p> This site is real state site to presenting the multiple best optioon of properties, in india </p>
@@ -879,7 +947,23 @@ body .wrapper {
 </div>
 
 
-
+<footer class="footer">
+  <div class="footer-container">
+      <div class="social-icons">
+          <a href="https://wa.me/9891378288"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.behance.net/abhishekkashyap51"><i class="fab fa-behance"></i></a>
+          <a href="https://www.instagram.com/invites/contact/?i=pwru9a7x3z8r&utm_content=hsn78s7"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#">About</a>
+          <a href="#card-area">Projects</a>
+          <a href="#footer">Contact</a>
+      </div>
+  </div>
+  <p class="copyright">&copy; 2025 Abhishek Kashyap. All Rights Reserved.</p>
+</footer>
 
 
 
